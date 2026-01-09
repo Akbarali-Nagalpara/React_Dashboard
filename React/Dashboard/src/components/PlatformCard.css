@@ -1,0 +1,96 @@
+.platform-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s;
+}
+
+.platform-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.platform-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ea4c89;
+}
+
+.platform-details {
+  flex: 1;
+}
+
+.platform-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.platform-label {
+  font-size: 12px;
+  color: #999;
+}
+
+.platform-stats {
+  text-align: right;
+}
+
+.platform-revenue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.platform-percentage {
+  font-size: 12px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .platform-card {
+    padding: 16px;
+  }
+
+  .platform-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-card {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .platform-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .platform-name {
+    font-size: 13px;
+  }
+
+  .platform-label {
+    font-size: 11px;
+  }
+
+  .platform-revenue {
+    font-size: 14px;
+  }
+}

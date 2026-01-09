@@ -1,0 +1,119 @@
+.pink-card {
+  background: linear-gradient(135deg, #ea4c89 0%, #d63384 100%);
+  border-radius: 16px;
+  padding: 28px 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 380px;
+  box-shadow: 0 8px 24px rgba(234, 76, 137, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.pink-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pink-card-header {
+  position: relative;
+  z-index: 1;
+}
+
+.pink-card-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 4px;
+}
+
+.pink-card-sublabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.pink-card-amount {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.pink-card-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.breakdown-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.breakdown-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.pink-badge {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.dark-badge {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.pink-card-footer {
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .pink-card {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .pink-card-amount {
+    font-size: 40px;
+  }
+
+  .breakdown-value {
+    font-size: 18px;
+  }
+}
