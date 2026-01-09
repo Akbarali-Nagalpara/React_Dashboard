@@ -17,68 +17,77 @@
   margin-bottom: 20px;
 }
 
-.chart-user {
+.chart-title-section {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
-.chart-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #ea4c89;
+.chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.chart-platforms {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
+  gap: 8px;
 }
 
-.chart-name {
-  font-size: 14px;
-  font-weight: 600;
+.platform-icon-sm {
+  font-size: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.platform-icon-sm:hover {
+  transform: scale(1.1);
+}
+
+.platform-icon-sm.dribbble {
+  color: #ea4c89;
+}
+
+.platform-icon-sm.instagram {
+  color: #e4405f;
+}
+
+.platform-icon-sm.google {
+  color: #4285f4;
+}
+
+.platform-icon-sm.facebook {
+  color: #1877f2;
+}
+
+.chart-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.chart-amount {
+  font-size: 24px;
+  font-weight: 700;
   color: #1a1a1a;
 }
 
-.chart-id {
+.chart-label {
   font-size: 12px;
   color: #999;
 }
 
-.chart-metrics {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.chart-container {
+  width: 100%;
+  height: 300px;
 }
 
-.chart-count {
-  background-color: #1a1a1a;
-  color: white;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-.chart-percent {
-  font-size: 13px;
-  font-weight: 600;
-  color: #666;
-}
-
-.chart-value {
-  font-size: 12px;
-  font-weight: 600;
-  padding: 4px 8px;
-  border-radius: 6px;
-  background-color: #e6f7f0;
-  color: #00c48c;
-}
-
-.chart-icon {
-  font-size: 16px;
+.chart-container {
+  width: 100%;
+  height: 300px;
 }
 
 @media (max-width: 768px) {
@@ -92,8 +101,18 @@
     gap: 12px;
   }
 
-  .chart-metrics {
+  .chart-title-section {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
+  }
+
+  .chart-value {
+    align-items: flex-start;
+  }
+
+  .chart-container {
+    height: 250px;
   }
 }
 
@@ -102,21 +121,23 @@
     padding: 16px;
   }
 
-  .chart-avatar {
-    width: 28px;
-    height: 28px;
+  .chart-title {
+    font-size: 14px;
+  }
+
+  .chart-amount {
+    font-size: 20px;
+  }
+
+  .chart-label {
     font-size: 11px;
   }
 
-  .chart-name,
-  .chart-id {
-    font-size: 12px;
+  .platform-icon-sm {
+    font-size: 18px;
   }
 
-  .chart-count,
-  .chart-percent,
-  .chart-value {
-    font-size: 10px;
-    padding: 3px 6px;
+  .chart-container {
+    height: 220px;
   }
 }
